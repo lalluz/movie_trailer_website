@@ -19,8 +19,9 @@ class Video:
 class Movie(Video):
     """This class inherit from class Video and describes a movie."""
 
-    def __init__(self, title, storyline, production_company, box_art_url, trailer_url, duration, box_office):
+    def __init__(self, title, storyline, production_company, box_art_url, trailer_url, director, duration, box_office):
         Video.__init__(self, title, storyline, production_company, box_art_url, trailer_url)
+        self.director = director
         self.duration = duration
         self.box_office = box_office
 
@@ -28,7 +29,7 @@ class Movie(Video):
 class TvShow(Video):
     """This class inherit from class Video and describes a tv show."""
 
-    def __init__(self, title, storyline, box_art_url, production_company, trailer_url,
+    def __init__(self, title, storyline, production_company, box_art_url, trailer_url,
                  episode_duration, number_of_seasons, number_of_episodes, is_ongoing):
         Video.__init__(self, title, storyline, production_company, box_art_url, trailer_url)
         self.episode_duration = episode_duration

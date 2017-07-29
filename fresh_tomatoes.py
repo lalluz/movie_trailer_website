@@ -56,6 +56,9 @@ main_page_head = '''
             top: 0;
             background-color: white;
         }
+        span.bold {
+            font-weight: bold;
+        }
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -124,8 +127,15 @@ main_page_content = '''
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <h2>{movie_title}</h2>
+    <p>{storyline}</p>
+    <hr>
     <img src="{poster_image_url}" width="220" height="342">
-    <h5>{storyline}</h5>
+    <hr>
+    <p><span class='bold'>Director:</span> {director}</p>
+    <p><span class='bold'>Duration:</span> {duration} min</p>
+    <p><span class='bold'>Box Office:</span> $ {box_office}</span></p>
+    <p>A {production} production</p>
+    <p>{year}</p>
 </div>
 '''
 
@@ -147,7 +157,12 @@ def create_movie_tiles_content(movies):
             movie_title=movie.title,
             poster_image_url=movie.box_art_url,
             trailer_youtube_id=trailer_youtube_id,
-            storyline=movie.storyline
+            storyline=movie.storyline,
+            director=movie.director,
+            production=movie.production_company,
+            duration=movie.duration,
+            box_office=movie.box_office,
+            year=movie.year
         )
 
     return content

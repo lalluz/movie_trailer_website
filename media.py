@@ -1,38 +1,33 @@
 import webbrowser
 
 
-class Video:
-    """This class provides a way to store video related information shared by movies and tv shows."""
-    VALID_RATINGS = ['G', 'PG', 'PG-13', 'R']
+class Movie:
+    """This class provides a way to store movie related information.
 
-    def __init__(self, title, storyline, production_company, box_art_url, trailer_url):
+    Args:
+        title (str): the movie title
+        storyline (str): a short description of the movie
+        box_art_url (str): a url to a poster image
+        trailer_url (str): a url to a youtube trailer video
+        production_company (str): the production company name
+        director (str): the director full name
+        duration (str): the duration in minutes
+        box_office (str): the amount of money raised by ticket sales in dollars
+        year (str): the release year
+
+    """
+
+    def __init__(self, title, storyline, box_art_url, trailer_url,
+                 production_company, director, duration, box_office, year):
         self.title = title
         self.storyline = storyline
-        self.production_company = production_company
         self.box_art_url = box_art_url
         self.trailer_url = trailer_url
-
-    def show_trailer(self):
-        webbrowser.open(self.trailer_url)
-
-
-class Movie(Video):
-    """This class inherit from class Video and describes a movie."""
-
-    def __init__(self, title, storyline, production_company, box_art_url, trailer_url, director, duration, box_office):
-        Video.__init__(self, title, storyline, production_company, box_art_url, trailer_url)
+        self.production_company = production_company
         self.director = director
         self.duration = duration
         self.box_office = box_office
+        self.year = year
 
-
-class TvShow(Video):
-    """This class inherit from class Video and describes a tv show."""
-
-    def __init__(self, title, storyline, production_company, box_art_url, trailer_url,
-                 episode_duration, number_of_seasons, number_of_episodes, is_ongoing):
-        Video.__init__(self, title, storyline, production_company, box_art_url, trailer_url)
-        self.episode_duration = episode_duration
-        self.number_of_seasons = number_of_seasons
-        self.number_of_episodes = number_of_episodes
-        self.is_ongoing = is_ongoing # boolean
+    def show_trailer(self):
+        webbrowser.open(self.trailer_url)

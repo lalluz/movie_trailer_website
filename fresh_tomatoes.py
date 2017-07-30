@@ -19,6 +19,7 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
+            background-color: #90A4AE;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -40,7 +41,7 @@ main_page_head = '''
             padding-top: 20px;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: #B0BEC5;
             cursor: pointer;
         }
         .scale-media {
@@ -58,6 +59,13 @@ main_page_head = '''
         }
         span.bold {
             font-weight: bold;
+        }
+        h2.title {
+            font-weight: bold;
+        }
+        hr.line {
+            margin-left: 10%;
+            margin-right: 10%;
         }
     </style>
     <script type="text/javascript" charset="utf-8">
@@ -107,7 +115,7 @@ main_page_content = '''
 
     <!-- Main Page Content -->
     <div class="container">
-      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
             <a class="navbar-brand" href="#">Movie Website Project</a>
@@ -126,11 +134,11 @@ main_page_content = '''
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <h2>{movie_title}</h2>
+    <h2 class="title">{movie_title}</h2>
     <p>{storyline}</p>
-    <hr>
+    <hr class="line">
     <img src="{poster_image_url}" width="220" height="342">
-    <hr>
+    <hr class="line">
     <p><span class='bold'>Director:</span> {director}</p>
     <p><span class='bold'>Duration:</span> {duration} min</p>
     <p><span class='bold'>Box Office:</span> $ {box_office}</span></p>

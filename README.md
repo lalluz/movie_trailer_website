@@ -28,8 +28,8 @@ Or clone this repository:
 In your terminal navigate to the project directory and type:  
 ` python entertainment_center.py `
 
-Your default browser should open the Movie Trailer Website.
-
+Your default browser should open the Movie Trailer Website.  
+Click on the movie poster to see the YouTube trailer.  
 Hit ` CTRL+C ` to exit the process.
 
 ## Licence

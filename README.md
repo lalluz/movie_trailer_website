@@ -22,7 +22,7 @@ that populates the page with Movie objects defined in entertainent_center.py.
  
 ## How to Run it
 Download the project zip file and unzip it. 
-Or clone this repository:
+Or clone this repository:  
 ` https://github.com/lalluz/movie_trailer_website.git `  
 
 In your terminal navigate to the project directory and type:  

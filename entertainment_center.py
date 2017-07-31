@@ -64,5 +64,8 @@ spirited_away = Movie('Spirited Away',
                       '289 million',
                       '2001')
 
+# Create a list of Movie objects
 movies = [spirited_away, frankenstein, life_of_brian, zoolander, toy_story, avatar]
+# Pass it to open_movies_page in fresh_tomatoes module
+# Generate the html code and open the browser with the page populated with our movies
 fresh_tomatoes.open_movies_page(movies)

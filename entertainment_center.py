@@ -2,6 +2,8 @@ from media import Movie
 import fresh_tomatoes
 
 
+''' Create instances of Movie class '''
+
 avatar = Movie('Avatar',
                'A marine on an alien planet',
                'https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar-Teaser-Poster.jpg',
@@ -52,5 +54,15 @@ zoolander = Movie('Zoolander',
                   '60 million',
                   '2001')
 
-movies = [frankenstein, life_of_brian, zoolander, toy_story, avatar, frankenstein, life_of_brian, zoolander, toy_story]
+spirited_away = Movie('Spirited Away',
+                      'A girl in the world of spirits',
+                      'https://upload.wikimedia.org/wikipedia/en/3/30/Spirited_Away_poster.JPG',
+                      'https://www.youtube.com/watch?v=ByXuk9QqQkk',
+                      'Studio Ghibli',
+                      'Hayao Miyazaki',
+                      '125',
+                      '289 million',
+                      '2001')
+
+movies = [spirited_away, frankenstein, life_of_brian, zoolander, toy_story, avatar]
 fresh_tomatoes.open_movies_page(movies)

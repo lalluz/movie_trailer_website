@@ -2,9 +2,9 @@ import webbrowser
 
 
 class Movie:
-    """This class provides a way to store movie related information.
+    """ This class provides a way to store movie related information.
 
-    Args:
+    Attributes:
         title (str): the movie title
         storyline (str): a short description of the movie
         box_art_url (str): a url to a poster image
@@ -19,6 +19,7 @@ class Movie:
 
     def __init__(self, title, storyline, box_art_url, trailer_url,
                  production_company, director, duration, box_office, year):
+        """ Init Movie class """
         self.title = title
         self.storyline = storyline
         self.box_art_url = box_art_url
@@ -30,4 +31,5 @@ class Movie:
         self.year = year
 
     def show_trailer(self):
+        """ Open the browser at the youtube trailer url. """
         webbrowser.open(self.trailer_url)
